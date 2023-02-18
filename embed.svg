@@ -57,7 +57,7 @@
         text-align: center;
         display: grid;
         place-items: center;
-        padding-top: 20%;
+        padding-top: 7%;
     }
     h1 {
         font-size: 7vw;
