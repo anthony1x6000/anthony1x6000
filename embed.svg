@@ -10,12 +10,12 @@
         --scan-lines: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTJDBGvsAAAANElEQVRYR+3QMREAIAzAwAx4wr+z4qIDP2TPfdVdrvMGNiNAgAABAgQIECBAgAABAgQ+FxirUHYBNbntEAAAAABJRU5ErkJggg==');
     }
     body {
-        padding-top: 7vw;
+        padding-top: 40vh;
         background-image: var(--bg-image);
         background-size: cover;
         background-position: 0px -0px;
+        height: 200vh;
         margin: 0;
-        height: 100vh;
     }
     body * {
         margin: 0;
@@ -26,7 +26,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        height: 100%;
+        height: 200vh;
         pointer-events: none;
         z-index: 1000;
         background-image: var(--scan-lines);
@@ -78,10 +78,9 @@
     }
     .exp {
         text-transform: uppercase;
-        color: rgb(158, 0, 0);
+        color: rgb(208, 0, 10);
         font-size: 1.5vw;
         width: 100%;
-        <!-- border-top: 0.2vw solid black; -->
         font-family: ampero;
         text-align: center;
         line-height: 2.5vw;
