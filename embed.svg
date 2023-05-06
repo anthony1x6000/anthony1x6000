@@ -10,7 +10,7 @@
         --scan-lines: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTJDBGvsAAAANElEQVRYR+3QMREAIAzAwAx4wr+z4qIDP2TPfdVdrvMGNiNAgAABAgQIECBAgAABAgQ+FxirUHYBNbntEAAAAABJRU5ErkJggg==');
     }
     body {
-        /* background: linear-gradient( rgba(19, 0, 65, 0.089), rgba(34, 0, 31, 0.548) ), var(--bg-image); */
+        background: linear-gradient( rgba(19, 0, 65, 0.089), rgba(34, 0, 31, 0.548) ), var(--bg-image);
         background-size: cover;
         background-position: 0px -0px;
         height: 200vh;
@@ -73,7 +73,7 @@
     }
     h1 {
         font-size: 7vw;
-        color: rgba(63, 63, 63, 1);
+        color: white;
         mix-blend-mode: difference;
         font-family: akira;
         line-height: 0vw;
