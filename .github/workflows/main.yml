@@ -1,8 +1,6 @@
 name: Construct SVG
 
-on:
-  push:
-    branches: [ main ]
+on: [push]
 
 jobs:
   build:
@@ -13,4 +11,3 @@ jobs:
 
     - name: Run construct-svg.sh
       run: ./construct-svg.sh
-
