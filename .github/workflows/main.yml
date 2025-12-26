@@ -2,6 +2,9 @@ name: Construct SVG
 
 on: [push]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,5 +12,21 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Run construct-svg.sh
-      run: ./construct-svg.sh
+    - name: Generate embed.svg
+      run: |
+        echo '<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+            <foreignObject width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml">' > embed.svg
+        cat index.html >> embed.svg
+        echo '
+                </div>
+            </foreignObject>
+        </svg>' >> embed.svg
+
+    - name: Commit and push embed.svg
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+        git add embed.svg
+        git diff --staged --quiet || git commit -m "Update embed.svg from index.html [skip ci]"
+        git push
